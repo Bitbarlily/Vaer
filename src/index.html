@@ -5,40 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vaer app</title>
 
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header>
-      <form>
-        <input type="search" placeholder="Enter a city..." required />
-        <input type="submit" value="Search" />
-      </form>
-    </header>
-    <main>
-      <div>
-        <h1>Oslo</h1>
+    <div class="bodyframe">
+      <header>
+        <form>
+          <input type="search" placeholder="Enter a city..." required />
+          <input type="submit" value="Search" />
+        </form>
+      </header>
+      <main>
+        <div>
+          <h1>Oslo</h1>
+          <p>
+            Monday 14:40, scattered clouds <br />
+            Humidity: 60%, Wind: 3.10km/h
+          </p>
+        </div>
+        <div>⛅10°C</div>
+      </main>
+      <footer>
         <p>
-          Monday 14:40, scattered clouds <br />
-          Humidity: 60%, Wind: 3.10km/h
+          This project was coded by
+          <a href="https://github.com/Bitbarlily" target="_blank">Lily</a>, is
+          <a
+            href="https://github.com/Bitbarlily/My-first-Gitty"
+            target="_blank"
+          >
+            on GitHub</a
+          >
+          and
+          <a
+            href="https://peaceful-buttercream-a85de6.netlify.app/"
+            target="_blank"
+            >hosted on Netlify</a
+          >
         </p>
-      </div>
-      <div>⛅10°C</div>
-    </main>
-    <footer>
-      <p>
-        This project was coded by
-        <a href="https://github.com/Bitbarlily" target="_blank">Lily</a>, is
-        <a href="https://github.com/Bitbarlily/My-first-Gitty" target="_blank">
-          on GitHub</a
-        >
-        and
-        <a
-          href="https://peaceful-buttercream-a85de6.netlify.app/"
-          target="_blank"
-          >hosted on Netlify</a
-        >
-      </p>
-    </footer>
+      </footer>
+    </div>
   </body>
-  <script src="src/index.js"></script>
+  <script src="js/index.js"></script>
 </html>
