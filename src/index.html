@@ -10,12 +10,13 @@
   <body>
     <div class="bodyframe">
       <header>
-        <form class="search-form">
+        <form class="search-form" id="searchForm">
           <input
             type="search"
             placeholder="Enter a city..."
             required
             class="search-form-input"
+            id="searchFormInput"
           />
           <input type="submit" value="Search" class="search-form-button" />
         </form>
@@ -23,7 +24,7 @@
       <main>
         <div class="weather-data">
           <div>
-            <h1 class="main-city">Oslo</h1>
+            <h1 class="main-city" id="mainCity">Oslo</h1>
             <p class="weather-details">
               Monday 14:40, scattered clouds <br />
               Humidity: <strong>60%</strong>, Wind: <strong>3.10km/h</strong>
