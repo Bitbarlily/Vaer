@@ -52,7 +52,34 @@ function handleSearhSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+  <div class="forecast-days">
+    <div class="forecast-date">${day}</div>
+    <div class="forecast-icon">⛅</div>
+    <div class="forecast-temps">
+      <div class="forecast-temp">
+        <strong>16°</strong>
+      </div>
+      <div class="forecast-temp">10°</div>
+    </div>
+  </div>
+`;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#searchForm");
 searchFormElement.addEventListener("submit", handleSearhSubmit);
 
 searchCity("Oslo");
+displayForecast();
