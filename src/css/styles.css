@@ -19,6 +19,7 @@ a {
 header {
   border-bottom: 1px solid #f9f7fe;
   padding: 0 0 30px 0;
+  margin: 0 auto;
 }
 
 .main-city {
@@ -59,6 +60,11 @@ header {
   font-size: 24px;
   font-weight: bold;
 }
+
+form {
+  display: flex;
+  justify-content: center;
+}
 .search-form-input {
   background-color: #f9f7fe;
   border: none;
@@ -92,7 +98,7 @@ main {
 }
 
 .forecast-icon {
-  font-size: 30px;
+  width: 100%;
   text-align: center;
 }
 
@@ -107,7 +113,6 @@ main {
   color: #f65282;
   display: flex;
   justify-content: center;
-  margin-top: 10px;
 }
 
 .forecast-temp {

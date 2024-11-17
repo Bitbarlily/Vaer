@@ -54,6 +54,13 @@ function handleSearhSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
 function getForecast(city) {
   let apiKey = "a3f38o45c2eb0807db7cfft853e805ff";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
@@ -66,20 +73,22 @@ function displayForecast(response) {
 
   let forecastHtml = "";
 
-  days.forEach(function (day) {
+  response.data.daily.forEach(function (day) {
     forecastHtml =
       forecastHtml +
       `
-  <div class="forecast-days">
-    <div class="forecast-date">${day}</div>
-    <div class="forecast-icon">⛅</div>
+<div>
+    <div class="forecast-days">
+      <div class="forecast-date">${formatDay(day.time)}</div>
+      <img src="${day.condition.icon_url}" class="forecast-icon"/>
+    </div>
     <div class="forecast-temps">
       <div class="forecast-temp">
-        <strong>16°</strong>
+        <strong>${Math.round(day.temperature.maximum)}°</strong>
       </div>
-      <div class="forecast-temp">10°</div>
+      <div class="forecast-temp">${Math.round(day.temperature.minimum)}°</div>
     </div>
-  </div>
+</div>
 `;
   });
 
